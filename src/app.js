@@ -18,11 +18,41 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-     Review.find({}, (err, reviews) => {
+    let query = {}
+    if (req.query.semester !== "All") {
+        query['semester'] = req.query.semester;
+    }
+    if (req.query.year !== "") {
+        query['year'] = req.query.year;
+    }
+    if (req.query.professor !== "") {
+        query['professor'] = req.query.professor
+    }
+    Review.find(query, (err, reviews) => {
         res.render('review', {reviews: reviews})
     })
-
 });
+
+app.get('/reviews/add', (req, res) => {
+    res.render('add');
+})
+
+app.post('/reviews/add', (req, res) => {
+    // NEED TO DO REQUIREMENTS VERIFICATION
+    let obj = {}
+    const a = new Review(req.body)
+    if (typeof(req.body.year) !== Number) {
+        console.log('AHAH')
+    }
+    console.log(a)
+    a.save((err, saved) => {
+        if (!err) {
+            res.redirect('/')
+        }
+    })
+    
+})
+
 
 
 
