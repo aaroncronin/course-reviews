@@ -3,21 +3,22 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 <title></title>
 </head>
-<header>Course Reviews</header>
+
 <body>
-
-	<div class='sidebar'>
-		<a href='/'>All Reviews</a>
-		<a href='/reviews/mine'>My Reviews</a>
-		<a href='/reviews/add'>Add Review!</a>
-		
+	<div class='container'>
+		<div class='header'>
+			Course Reviews
+		</div>
+		<div class='pageVisits'>
+			Your session's total page visits:
+			{{pageVisits}}
+		</div>
+		<div class='sidebar'>
+			<a href='/'>All Reviews</a>
+			<a href='/reviews/mine'>My Reviews</a>
+			<a href='/reviews/add'>Add Review!</a>
+		</div>
 	</div>
-
-	
-
-	<div id='body'>
-		{{{body}}}
-	</div>
-
+	{{{body}}}
 </body>
 </html>

@@ -28,4 +28,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
     dbconf = 'mongodb://localhost/hw06';
 }
 
-mongoose.connect(dbconf, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(dbconf, {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
+});
