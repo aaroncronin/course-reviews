@@ -91,18 +91,21 @@ th {
 }
 
 form {
-    text-align: center;
     padding: 20px;
+    font-size: larger;
 }
 
-h2 {
-    width: 40%;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
+label {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+}
+
+#submitButton {
+    display: block;
+    margin: 0 auto;
+}
+
+#all_form {
     text-align: center;
-    color: white;
-    background-color: #1d4463;
 }
-

@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-
-
 // my schema goes here!
 const Review = new mongoose.Schema({
     courseNumber: String,

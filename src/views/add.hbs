@@ -1,16 +1,20 @@
 <h1 id='title'>ADD A REVIEW!</h1>
-
+<h3 style='text-align: center'>{{error}}</h3>
 <form method="POST" action="">
-    
-    Course Number: <input type="text" name="courseNumber"><br><br>
-	
-	Course Name: <input align='left' type="text" name="courseName"><br><br>
-    Semester: <select name="semester">
+    <label>Course Number:</label> 
+    <input type="text" name="courseNumber"><br><br>
+	<label>Course Name:</label> 
+    <input align='left' type="text" name="courseName"><br><br>
+    <label>Semester:</label> 
+    <select name="semester">
         <option value="Fall">Fall</option>
         <option value="Spring">Spring</option>
     </select><br><br>
-    Year: <input type="text" name="year"><br><br>
-    Professor: <input type="text" name="professor"><br><br>
-    Review: <input type="text" name="review"><br><br>
-	<input type="submit">	
+    <label>Year:</label>
+    <input type="text" name="year"><br><br>
+    <label>Professor:</label>
+    <input type="text" name="professor"><br><br>
+    <label>Review:</label>
+    <input type="text" name="review"><br><br>
+	<input id='submitButton' type="submit">
 </form>
